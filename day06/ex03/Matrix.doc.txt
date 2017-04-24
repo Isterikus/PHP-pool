@@ -1,0 +1,39 @@
+<- Matrix ----------------------------------------------------------------------
+The Matrix class handles matrix.
+
+An instance can be contructed from one of default constants:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+new Matrix( array( 'preset' => Matrix::IDENTITY ) );
+Creates standart matrix:
+M | vtcX | vtcY | vtcZ | vtxO
+-----------------------------
+x | 1.00 | 0.00 | 0.00 | 0.00
+y | 0.00 | 1.00 | 0.00 | 0.00
+z | 0.00 | 0.00 | 1.00 | 0.00
+w | 0.00 | 0.00 | 0.00 | 1.00
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+new Matrix( array( 'preset' => Matrix::SCALE, 'scale' => 10.0 ) );
+Creates standart matrix multiply all coord by scale.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+new Matrix( array( 'preset' => Matrix::[RX | RY | RZ], 'angle' => M_PI_4 ) );
+Creates standart matrix and multiply it on rotation matrix.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+new Matrix( array( 'preset' => Matrix::TRANSLATION, 'vtc' => $vtc ) );
+Creates standart matrix and multiply it on Vector.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+$P = new Matrix( array( 'preset' => Matrix::PROJECTION,
+ 						'fov' => 60,
+						'ratio' => 640/480,
+						'near' => 1.0,
+						'far' => -50.0 ) );
+Do some fcking peace of shit!
+
+The class provides the following methods :
+
+Matrix mult( Matrix $rhs );
+Multiply two matrix.
+
+Vertex transformVertex( Vertex $vtx );
+Multiply matrix on Vertex and return Vertex.
+
+---------------------------------------------------------------------- Matrix ->

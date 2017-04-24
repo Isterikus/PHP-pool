@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<title>Hello</title>
+<style type="text/css">
+	.elem {
+		display: block;
+		margin: auto;
+		margin-top: 100px;
+		width: 200px;
+		height: 200px;
+		background-color: rgb(255, 0, 0);
+		border-radius: 50%;
+	}
+</style>
+</head>
+<body>
+
+<div class="elem" id="elem">
+	
+</div>
+
+<script type="text/javascript">
+$( document ).ready(function() {
+	var x = 0;
+	$('#elem').click(function() {
+		if ($('#elem').width() == 420)
+		{
+			x = 0;
+			$(this).css("width", "200");
+			$(this).css("height", "200");
+			$(this).css("background-color", 'hsl(' + x + ', 100%, 45%)');
+		}
+		else
+		{
+			x += 17;
+			$(this).css("width", "+=10");
+			$(this).css("height", "+=10");
+			$(this).css("background-color", 'hsl(' + x + ', 100%, 45%)');
+		}
+	});
+	$('#elem').mouseleave(function() {
+		if ($('#elem').width() > 200) {
+			$(this).css("width", "-=10");
+			$(this).css("height", "-=10");
+		}
+		x -= 17;
+		if (x < 0)
+			x = 360;
+		$(this).css("background-color", 'hsl(' + x + ', 100%, 45%)');
+	});
+});
+</script>
+</body>
+</html>

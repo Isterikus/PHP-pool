@@ -1,0 +1,52 @@
+.menu {
+    padding: 0;
+    width: 50%;
+    margin: auto;
+    height: 70px;
+    background-color: bisque;
+    cursor: s-resize;
+}
+.dropdown {
+    margin: 0;
+    padding: 0;
+    margin-right: -4px;
+    padding: 0;
+    text-align: center;
+    width: 20%;
+    height: 70px;
+    line-height: 70px;
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    transition: height 0.5s;
+}
+
+.three {
+    position: absolute;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    height: 0;
+    width: 100%;
+    transition: height 1s;
+}
+.con {
+    line-height: 50px;
+}
+.th:hover .three {
+    height: 150px;
+}
+
+.dropdown:hover .dropdown-content {
+    height: 50px;
+    line-height: 50px;
+}

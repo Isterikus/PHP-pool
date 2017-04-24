@@ -1,0 +1,153 @@
+body {
+    background-color: RGB(80, 80, 80);
+}
+.all {
+    margin-top: 1%;
+}
+.main {
+    position: absolute;
+    padding: 0.5em;
+    background-color: RGB(144, 144, 144);
+    display: inline-block;
+    border-radius: 0.7em;
+    margin-top: 1em;
+    box-shadow: 10px 10px 5px;
+}
+.center {
+    display: block;
+    position: relative;
+    margin: auto;
+    width: 53%;
+}
+.left, .right {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 12%;
+    height: 71%;
+    border-radius: 0.7em;
+    background-color: RGB(144, 144, 144);
+    text-align: center;
+    box-shadow: 9px 9px 5px;
+}
+.left {
+    left: -15%;
+    top: 0;
+}
+.top {
+    margin-top: 10px;
+}
+.right {
+    right: -14%;
+    top: 0;
+}
+.mid_img {
+    width: 100%;
+}
+.l_img {
+    width: 58%;
+}
+.r_img {
+    width: 55%;
+}
+.brick {
+    width: 95%;
+    margin: auto;
+    height: 18%;
+    background-image: url(resources/brick.jpg);
+    background-repeat: repeat;
+}
+.bonjour {
+    position: absolute;
+    left: -25%;
+    bottom: -18%;
+    border-radius: 0.7em;
+    box-shadow: 10px 10px 5px;
+/*        padding: 10px;*/
+    padding-left: 10px;
+    padding-bottom: 50px;
+    width: 50%;
+    background-color: RGB(166, 251, 150);
+}
+.wid {
+    width: 75%;
+    box-shadow: 0px 0px 2px 1px #000 inset;
+}
+.sz {
+    font-size: 30px;
+}
+.sh {
+    text-shadow: 7px 7px 5px red;
+}
+.ser {
+    font-family: sans-serif;
+}
+#sz {
+    font-family: serif;
+}
+p {
+    font-size: 18px;
+    margin: 0;
+}
+.it {
+    font-style: italic;
+}
+.pos {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+.head {
+    position: relative;
+    background-color: RGB(144, 144, 144);
+    border-radius: 0.7em;
+    width: 75%;
+    height: 110px;
+    margin: auto;
+    margin-bottom: 0;
+    box-shadow: 10px 10px 5px;
+}
+.day {
+    width: 30%;
+    position: relative;
+    top: 10px;
+}
+.loop {
+    width: 20%;
+    position: absolute;
+    right: 3.5%;
+    bottom: -15%;
+}
+.refresh {
+    width: 1.2em;
+    position: absolute;
+    top: 0.6em;
+    right: 0.6em;
+}
+.close {
+    width: 1.2em;
+    position: absolute;
+    bottom: 0.6em;
+    right: 0.6em;
+}
+.rad {
+    border: 5px solid red;
+    border-radius: 2px 2px;
+}
+.abs {
+    position: absolute;
+}
+
+.abs_1 {
+    width: 13.4%;
+    height: 39%;
+    left: 33%;
+    bottom: 5%;
+}
+.abs_2 {
+    width: 12.5%;
+    height: 20%;
+    left: 63%;
+    bottom: 28%;
+}

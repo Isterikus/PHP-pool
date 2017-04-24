@@ -1,0 +1,38 @@
+<- Vector ----------------------------------------------------------------------
+The Vector class handles vectors from Vertrex class dots.
+
+An instance can be contructed from either one dot value:
+new Vector( array( 'orig' => $orig, 'dest' => $dest ) );
+
+Or two dots:
+new Vector( array( 'orig' => $orig, 'dest' => $dest ) );
+
+The class provides the following methods :
+
+Integer   magnitude();
+Count and return vector magnitude.
+
+Vector   normalize();
+Divides all coordinates by magnitude and returns a new Vector instance.
+
+Vector   add(Vector $rhs);
+Add two vectors and returns a new Vector instance.
+
+Vector   sub(Vector $rhs);
+Subtracts vector this from vector $rhs and returns a new Vector instance.
+
+Vector   opposite();
+Returns opposite Vector instance.
+
+Vector	scalarProduct($k);
+Multiply coordinates by $k and returns a new Vector instance.
+
+Vector	dotProduct($rhs);
+Multiply two vectors and returns a new Vector instance.
+
+Integer	cos($rhs);
+Found angle between two vectors and return it cosinus.
+
+Vector	crossProduct($rhs);
+Multiply vectors by magic and returns a new Vector instance.
+---------------------------------------------------------------------- Vector ->

@@ -1,0 +1,16 @@
+<- Vertex ----------------------------------------------------------------------
+The Vertex class handles XYZ coordinates and also disturbing coordinate w for
+homogeneous coordinates and color from Color class.
+
+An instance can be contructed from x, y and z coordinates:
+new Vertex( array( 'x' => 2.0, 'y' => 0.0, 'z' => 9.5 ) );
+
+Also you have two optional values:
+new Vertex( array( 'x' => 2.0, 'y' => 0.0, 'z' => 9.5, 'w' => 2,
+					'color' => $red ) );
+
+All coordinates are float.
+Option verbose removes outputting color from __toString method.
+
+The class provides no methods.
+---------------------------------------------------------------------- Vertex ->

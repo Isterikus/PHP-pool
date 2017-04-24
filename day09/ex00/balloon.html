@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello</title>
+<style type="text/css">
+	.elem {
+		display: block;
+		margin: auto;
+		margin-top: 100px;
+		width: 200px;
+		height: 200px;
+		background-color: rgb(255, 0, 0);
+		border-radius: 50%;
+	}
+</style>
+</head>
+<body>
+
+<div class="elem" id="elem">
+	
+</div>
+
+<script type="text/javascript">
+	console.log('hello');
+	var block = document.getElementById('elem');
+	var	r = 255;
+	var g = 0;
+	var	b = 0;
+
+	function change_col1() {
+		if (r > 0 && b == 0) {
+			if (r - 37 < 0)
+				r = 0;
+			else
+				r -= 37;
+			if (g + 37 > 255)
+				g = 255;
+			else
+				g += 37;
+		}
+		else if (g > 0 && r == 0)
+		{
+			if (g - 37 < 0)
+				g = 0;
+			else
+				g -= 37;
+			if (b + 37 > 255)
+				b = 255;
+			else
+				b += 37;
+		}
+		else if (b > 0 && g == 0)
+		{
+			if (b - 37 < 0)
+				b = 0;
+			else
+				b -= 37;
+			if (r + 37 > 255)
+				r = 255;
+			else
+				r += 37;
+		}
+	}
+	function change_col2() {
+		if (r > 0 && g == 0) {
+			if (r - 37 < 0)
+				r = 0;
+			else
+				r -= 37;
+			if (b + 37 > 255)
+				b = 255;
+			else
+				b += 37;
+		}
+		else if (b > 0 && r == 0)
+		{
+			if (b - 37 < 0)
+				b = 0;
+			else
+				b -= 37;
+			if (g + 37 > 255)
+				g = 255;
+			else
+				g += 37;
+		}
+		else if (g > 0 && b == 0)
+		{
+			if (g - 37 < 0)
+				g = 0;
+			else
+				g -= 37;
+			if (r + 37 > 255)
+				r = 255;
+			else
+				r += 37;
+		}
+	}
+	block.onclick = function() {
+		var val = block.offsetWidth;
+		change_col1();
+		cl = block.style.backgroundColor = "rgb("+r+","+g+","+b+")";
+		if (val == 420) {
+			block.style.width = '200px';
+			block.style.height = '200px';
+			r = 255;
+			g = 0;
+			b = 0;
+		}
+		else
+		{
+			val = val + 10;
+			block.style.width = val + "px";
+			block.style.height = val + "px";
+		}
+	}
+	block.onmouseout = function () {
+		var val = block.offsetWidth;
+		change_col2();
+		console.log(val);
+		cl = block.style.backgroundColor = "rgb("+r+","+g+","+b+")";
+		if (val > 200) {
+			val -= 5;
+			block.style.width = val + "px";
+			block.style.height = val + "px";
+		}
+	}
+</script>
+</body>
+</html>
